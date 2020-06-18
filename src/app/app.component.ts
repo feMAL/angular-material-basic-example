@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { PhotosService } from './services/photos.service';
+import { photos } from './models/photos.model';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'material-first-example';
+
+  public albumId = [1,2,3]
+
+  constructor(private _photosService:PhotosService){}
+
+  ngOnInit(){
+
+  }
 }
